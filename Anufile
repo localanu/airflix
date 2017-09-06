@@ -1,0 +1,10 @@
+
+FROM ubuntu:14.04
+
+RUN apt-get update && apt-get install -y \
+nginx \
+php5 \
+php5-mcrypt \
+php5-gd \
+git \
+RUN composer create-project --prefer-dist airflix/airflix airflix.local 
