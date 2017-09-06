@@ -8,4 +8,3 @@ RUN curl -sS https://getcomposer.org/installer | php \
     && mv composer.phar ~/composer
 RUN ~/composer create-project --prefer-dist airflix/airflix airflix.local ~/nganu
 RUN rm -r ~/nganu
-RUN rm -r ~/bin
