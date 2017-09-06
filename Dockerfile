@@ -1,7 +1,8 @@
 FROM ubuntu:14.04
-## RUN apt-get update && apt-get install -y \
-##        php5 \
-##        && apt-get clean
+RUN apt-get update && apt-get install -y \
+      curl \
+      php5 \
+        && apt-get clean
 RUN mkdir ~/bin
 RUN curl -sS https://getcomposer.org/installer | php \
     && mv composer.phar ~/bin/composer
