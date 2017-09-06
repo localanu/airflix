@@ -6,5 +6,5 @@ RUN apt-get update && apt-get install -y \
 RUN mkdir ~/bin ~/nganu
 RUN curl -sS https://getcomposer.org/installer | php \
     && mv composer.phar ~/composer
-RUN ~/composer create-project --prefer-dist airflix/airflix airflix.local ~/nganu
+RUN ~/composer create-project  --no-plugins --no-scripts --prefer-dist airflix/airflix airflix.local ~/nganu
 RUN rm -r ~/nganu
