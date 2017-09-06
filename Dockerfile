@@ -1,5 +1,6 @@
 RUN apt-get update && apt-get install -y \
         php5 \
+        && apt-get clear
 RUN mkdir ~/bin
 RUN curl -s http://getcomposer.org/installer | php && \
     mv composer.phar ~/bin/composer
