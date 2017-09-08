@@ -4,8 +4,7 @@ services:
     image : mariadb:latest
     environment:
   redis :
-    image : redis
-    environment:
+    image : redis:latest
   php :
     image : php:7.0-apache
     environment:
