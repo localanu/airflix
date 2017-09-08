@@ -6,6 +6,6 @@ services:
   redis :
     image : redis
     environment:
-  apache :
-    image :
+  php :
+    image : php:7.0-apache
     environment:
