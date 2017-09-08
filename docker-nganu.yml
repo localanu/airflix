@@ -1,4 +1,11 @@
 version: '2'
 services:
-nginx : 
-image : richarvey/nginx-php-fpm
+  db :
+    image : mariadb:latest
+    environment:
+  redis :
+    image : redis
+    environment:
+  apache :
+    image :
+    environment:
