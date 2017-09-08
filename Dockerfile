@@ -1,7 +1,2 @@
-FROM ubuntu:14.04
-RUN apt-get update && apt-get install -y \
-      git \ 
-        && apt-get clean
-RUN mkdir \var\www\airflix\
-RUN cd \var\www\airfilx
-RUN  git clone https://github.com/wells/airflix.git .
+MAINTAINER Mochammad Nur Afandi (localanu@gmail.com)
+ADD . /var/www/airflix
