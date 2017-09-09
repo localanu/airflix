@@ -5,7 +5,7 @@ FROM php:7.0-apache
 RUN apt update && apt install -y \
 libxml2
 FROM php:7.0-apache
-RUN docker-php-source extract \
+RUN docker-php-source extract && \
     ./configure --prefix=/usr/local \
     --with-xml \
     --with-mbstring \
