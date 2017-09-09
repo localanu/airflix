@@ -11,7 +11,7 @@ RUN docker-php-source extract \
     --with-mbstring \
     --with-openssl \
     --with-tokenizer \
-    --with-pdo 
-    && make -j4 
-    && make install
+    --with-pdo && \
+    make -j4 && \
+    make install \
     && docker-php-source delete
