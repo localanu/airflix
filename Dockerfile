@@ -4,5 +4,14 @@ ADD . /var/www/airflix
 FROM php:7.0-apache
 RUN apt update && apt install -y \
 libxml2
-RUN docker-php-ext-configure gd --with-xml-dir=/usr/bin --with-jpeg-dir=/usr/bin
-RUN docker-php-ext-install pdo mbstring tokenizer xml
+FROM php:7.0-apache
+RUN docker-php-source extract \
+    ./configure --prefix=/usr/local \
+    --with-xml \
+    --with-mbstring \
+    --with-openssl \
+    --with-tokenizer \
+    --with-pdo 
+    && make -j4 
+    && make install
+    && docker-php-source delete
