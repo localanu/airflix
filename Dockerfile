@@ -1,7 +1,6 @@
-FROM ubuntu:14.04
+FROM php:7.0-apache
 MAINTAINER Mochammad Nur Afandi (localanu@gmail.com)
 ADD . /var/www/airflix
-FROM php:7.0-apache
 RUN apt update && apt install -y \
 libxml2
 FROM php:7.0-apache
