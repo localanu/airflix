@@ -5,13 +5,19 @@ FROM php:7.0-apache
 RUN apt update && apt install -y \
 libxml2
 FROM php:7.0-apache
-RUN docker-php-source extract && \
-    ./configure --prefix=/usr/local \
+docker-php-ext-configure gd \
     --with-xml \
     --with-mbstring \
     --with-openssl \
     --with-tokenizer \
-    --with-pdo && \
-    make -j4 && \
-    make install \
-    && docker-php-source delete
+    --with-pdo 
+#RUN docker-php-source extract && \
+#    ./configure --prefix=/usr/local \
+#    --with-xml \
+#    --with-mbstring \
+#    --with-openssl \
+#    --with-tokenizer \
+#    --with-pdo && \
+#    make -j4 && \
+#    make install \
+#    && docker-php-source delete
